@@ -1,4 +1,4 @@
-import Radio from "./components/two_way_binding/SubmitForm_radio";
+import CheckBox from "./components/two_way_binding/SubmitForm_checkbox";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       style={{ padding: "20px" }}
     >
       <div>Brian Nguyen</div>
-      <Radio />
+      <CheckBox />
     </div>
   );
 }
