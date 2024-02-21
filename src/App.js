@@ -15,6 +15,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
 
 import TodoList from "./components/two_way_binding/todolist";
+import Content from "./components/mount_unmout/Content";
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
@@ -90,21 +91,29 @@ function ModeToggle() {
 function App() {
   return (
     <>
-      <TodoList />
-      <ModeSelect />
-      <hr />
-      <ModeToggle />
-      <hr />
       <div
         className="App"
-        style={{ padding: "20px" }}
+        style={{ padding: "10px" }}
       >
-        <div>Brian Nguyen</div>
-        <CheckBox />
-        <Stack>
-          <Button variant="contained">log</Button>
-          <Button>log</Button>
-        </Stack>
+        <Content />
+        <hr />
+        <TodoList />
+        <hr />
+        <ModeSelect />
+        <hr />
+        <ModeToggle />
+        <hr />
+        <div
+          className="App"
+          style={{ padding: "20px" }}
+        >
+          <div>Brian Nguyen</div>
+          <CheckBox />
+          <Stack>
+            <Button variant="contained">log</Button>
+            <Button>log</Button>
+          </Stack>
+        </div>
       </div>
     </>
   );
