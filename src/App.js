@@ -14,6 +14,8 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
 
+import TodoList from "./components/two_way_binding/todolist";
+
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
 
@@ -88,6 +90,7 @@ function ModeToggle() {
 function App() {
   return (
     <>
+      <TodoList />
       <ModeSelect />
       <hr />
       <ModeToggle />
