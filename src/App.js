@@ -14,7 +14,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
 import { useState } from "react";
-import ReCallApi from "./components/useEffect/re-CallApi";
+import ListenDomEvents from "./components/useEffect/ListenDomEvents";
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
@@ -89,17 +89,23 @@ function ModeToggle() {
 
 function App() {
   const [show, setShow] = useState(false);
+  const [status, setStatus] = useState("Mounted");
+
+  const handleButtonClick = () => {
+    setShow(!show);
+    setStatus(show ? "Mounted" : "Unmounted");
+  };
 
   return (
     <>
       <div style={{ padding: "10px" }}>
         <Button
           variant="contained"
-          onClick={() => setShow(!show)}
+          onClick={handleButtonClick}
         >
-          Toggle !
+          {status || setStatus("Unmounted")}
         </Button>
-        {show && <ReCallApi />}
+        {show && <ListenDomEvents />}
 
         <hr />
         {/* <TodoList />
