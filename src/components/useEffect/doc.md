@@ -38,9 +38,12 @@
    - Gọi callback mỗi khi component re-render
    - Gọi callback sau khi element đc thêm vào DOM
 2. `useEffect(callback, [])`
+   - Chỉ gọi Callback 1 lần khi component Mounted
+   - Tránh re-render vô tận
 3. `useEffect(callback, [deps])`
+   - Callback sẽ đc gọi lại mỗi khi deps thay đổi
 
 ## Lưu ý
 
-- Điểm chung của 3 trường hợp:
+- Lý thuyết 3 trường hợp:
   - Callback luôn đc gọi sau khi Component Mount

@@ -1,4 +1,4 @@
-// Bài toán 1
+// Bài toán 1 : Update DOM
 
 import { useEffect, useState } from "react";
 

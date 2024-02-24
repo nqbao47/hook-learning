@@ -13,10 +13,8 @@ import Box from "@mui/material/Box";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
-
-import TodoList from "./components/two_way_binding/todolist";
-import UpdateDOM from "./components/useEffect/UpdateDOM";
 import { useState } from "react";
+import ReCallApi from "./components/useEffect/re-CallApi";
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
@@ -101,7 +99,7 @@ function App() {
         >
           Toggle !
         </Button>
-        {show && <UpdateDOM />}
+        {show && <ReCallApi />}
 
         <hr />
         {/* <TodoList />
