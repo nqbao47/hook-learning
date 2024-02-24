@@ -13,9 +13,8 @@ import Box from "@mui/material/Box";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
-
-import TodoList from "./components/two_way_binding/todolist";
-import Content from "./components/mount_unmout/Content";
+import { useState } from "react";
+import ReCallApi from "./components/useEffect/re-CallApi";
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
@@ -89,15 +88,21 @@ function ModeToggle() {
 }
 
 function App() {
+  const [show, setShow] = useState(false);
+
   return (
     <>
-      <div
-        className="App"
-        style={{ padding: "10px" }}
-      >
-        <Content />
+      <div style={{ padding: "10px" }}>
+        <Button
+          variant="contained"
+          onClick={() => setShow(!show)}
+        >
+          Toggle !
+        </Button>
+        {show && <ReCallApi />}
+
         <hr />
-        <TodoList />
+        {/* <TodoList />
         <hr />
         <ModeSelect />
         <hr />
@@ -113,7 +118,7 @@ function App() {
             <Button variant="contained">log</Button>
             <Button>log</Button>
           </Stack>
-        </div>
+        </div> */}
       </div>
     </>
   );
