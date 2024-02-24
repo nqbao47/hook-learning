@@ -20,6 +20,7 @@
 3. Listen DOM events
    - Scroll
    - Resize
+   * Search tips: Dom events w3s
 4. Cleanup
    - Remove listener / Unsubscribe
    - Clear timer
@@ -46,4 +47,5 @@
 ## Lưu ý
 
 - Lý thuyết 3 trường hợp:
-  - Callback luôn đc gọi sau khi Component Mount
+  1. Callback luôn đc gọi sau khi Component Mount
+  2. Cleanup function luôn luôn được gọi trước khi Component unmounted
