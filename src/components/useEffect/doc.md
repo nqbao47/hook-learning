@@ -49,3 +49,6 @@
 - Lý thuyết 3 trường hợp:
   1. Callback luôn đc gọi sau khi Component Mount
   2. Cleanup function luôn luôn được gọi trước khi Component unmounted
+     - Nếu nhận thấy chương trình có các setInterval, Listen events, async/await,... => nhớ phải luôn clear nó đi trước khi chương trình Unmouted.
+       `return () => {}`
+  3. Cleanup luôn dc gọi trước khi callback đc gọi (trừ lần component đc Mounted)
