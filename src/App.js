@@ -14,7 +14,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
 import { useState } from "react";
-import PreviewAvt from "./components/useEffect/PreviewAvt";
+import FakeChatApp from "./components/useEffect/FakeChatApp";
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
@@ -105,7 +105,7 @@ function App() {
         >
           {status || setStatus("Unmounted")}
         </Button>
-        {show && <PreviewAvt />}
+        {show && <FakeChatApp />}
 
         <hr />
         {/* <TodoList />
