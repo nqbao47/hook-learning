@@ -13,8 +13,9 @@ import Box from "@mui/material/Box";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
+import CallbackExample from "./components/memo/useCallBack";
 import { useState } from "react";
-import CheckPrevAndCurrentValue from "./components/useRef/CheckPrevAndCurrentValue";
+import { useCallback } from "react";
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
@@ -88,25 +89,35 @@ function ModeToggle() {
 }
 
 function App() {
-  const [show, setShow] = useState(false);
-  const [status, setStatus] = useState("Mounted");
+  // -- Ví dụ về Mounted/Unmounted
+  // const [show, setShow] = useState(false);
+  // const [status, setStatus] = useState("Mounted");
 
-  const handleButtonClick = () => {
-    setShow(!show);
-    setStatus(show ? "Mounted" : "Unmounted");
-  };
+  // const handleButtonClick = () => {
+  //   setShow(!show);
+  //   setStatus(show ? "Mounted" : "Unmounted");
+  // };
+
+  // -- Ví dụ memo()/ useCallBack()
+  const [count, setCount] = useState(0);
+
+  const handleIncrease = useCallback(() => {
+    setCount((prev) => prev + 1);
+  }, []);
 
   return (
     <>
       <div style={{ padding: "10px" }}>
-        <Button
+        {/* // -- Ví dụ memo/callback */}
+        <CallbackExample onIncrease={handleIncrease} />
+        <h1>{count}</h1>
+        {/* <Button
           variant="contained"
           onClick={handleButtonClick}
         >
           {status || setStatus("Unmounted")}
         </Button>
-        {show && <CheckPrevAndCurrentValue />}
-
+        {show && <CheckPrevAndCurrentValue />} */}
         <hr />
         {/* <TodoList />
         <hr />
