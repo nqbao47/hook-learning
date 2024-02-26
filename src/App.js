@@ -13,7 +13,7 @@ import Box from "@mui/material/Box";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
-import CallbackExample from "./components/memo/useCallBack";
+import AddProduct from "./components/useMemo/AddProduct";
 import { useState } from "react";
 import { useCallback } from "react";
 
@@ -99,18 +99,19 @@ function App() {
   // };
 
   // -- Ví dụ memo()/ useCallBack()
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
-  const handleIncrease = useCallback(() => {
-    setCount((prev) => prev + 1);
-  }, []);
+  // const handleIncrease = useCallback(() => {
+  //   setCount((prev) => prev + 1);
+  // }, []);
 
   return (
     <>
       <div style={{ padding: "10px" }}>
+        <AddProduct />
         {/* // -- Ví dụ memo/callback */}
-        <CallbackExample onIncrease={handleIncrease} />
-        <h1>{count}</h1>
+        {/* <CallbackExample onIncrease={handleIncrease} />
+        <h1>{count}</h1> */}
         {/* <Button
           variant="contained"
           onClick={handleButtonClick}
