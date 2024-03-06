@@ -6,10 +6,14 @@
  */
 import { memo } from "react";
 
-function MemoExample() {
+function MemoExample({ count }) {
   console.log("re-render ^^");
-
-  return <h1>Hiểu về memo</h1>;
+  return (
+    <>
+      <h1>Hiểu về memo</h1>
+      <p>{count}</p>
+    </>
+  );
 }
 
 export default memo(MemoExample);
