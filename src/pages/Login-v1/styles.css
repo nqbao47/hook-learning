@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://i.pinimg.com/originals/72/33/6d/72336d79f1e53c206f5f0c413b848ffa.jpg');
+}
+
+h1 {
+    color: #fff;
+    font-weight: 0;
+}
+
+.form {
+    display: flex;
+    width: 80%;
+    height: 100vh;
+}
+
+.form-left,
+.form-right {
+    flex: 1;
+    /* Chia đều không gian giữa form-left và form-right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Căn giữa theo chiều dọc */
+    align-items: center;
+    /* Căn giữa theo chiều ngang */
+}
+
+.form-left {
+    /* Màu nền cho form-left (tùy chọn) */
+    padding: 20px;
+    font-size: 20px;
+    background-image: url('https://i.pinimg.com/originals/00/30/1e/00301ed545cd165f285f9073759eef2c.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.form-left p {
+    margin-top: 0px;
+    font-size: 10px;
+}
+
+.form-right {
+    background-color:#202123;
+    padding: 20px;
+    /* Khoảng cách giữa nội dung và biên của form-right (tùy chọn) */
+}
+
+.input {
+    width: 100%;
+    padding: 20px;
+}

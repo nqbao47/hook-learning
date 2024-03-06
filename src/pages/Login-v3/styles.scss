@@ -1,0 +1,26 @@
+$bgColor: #E8ECF8;
+$primaryColor: #0A7DF6;
+$secondColor: #3799FC;
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: $bgColor;
+}
+
+.form {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    background-color: $secondColor;
+}
+
+.form-left,
+.form-right {
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,102 @@
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: #7b4397;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dc2430, #7b4397);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dc2430, #7b4397);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main-form {
+    display: flex;
+    width: 70%;
+    height: 80vh;
+}
+
+.left-form,
+.right-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-form {
+    flex: 60%;
+    padding: 10px 50px 90px 50px;
+    text-align: left;
+    background: #FEAC5E;
+    background: #70e1f5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffd194, #70e1f5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.left-form-header {
+    color: #fff;
+    font-size: 60px;
+}
+
+.left-form-content {
+    margin-top: 0px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.right-form {
+    flex: 40%;
+    background-color: #fff;
+    padding: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.right-form-title {
+    color: #877cbf;
+    font-weight: bold;
+}
+
+.input {
+    display: flex;
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: #E9E6FF;
+}
+
+.action-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-submit {
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    background: #7b4397;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dc2430, #7b4397);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dc2430, #7b4397);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+// Responsive
+@media only screen and (max-width: 800px) {
+    .left-form {
+        display: none;
+    }
+}
