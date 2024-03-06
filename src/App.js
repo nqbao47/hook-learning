@@ -13,9 +13,7 @@ import Box from "@mui/material/Box";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
-import AddProduct from "./components/useMemo/AddProduct";
-import { useState } from "react";
-import { useCallback } from "react";
+import LoginV3 from "./pages/Login-v3";
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
@@ -107,8 +105,8 @@ function App() {
 
   return (
     <>
-      <div style={{ padding: "10px" }}>
-        <AddProduct />
+      <div>
+        <LoginV3 />
         {/* // -- Ví dụ memo/callback */}
         {/* <CallbackExample onIncrease={handleIncrease} />
         <h1>{count}</h1> */}
@@ -119,7 +117,7 @@ function App() {
           {status || setStatus("Unmounted")}
         </Button>
         {show && <CheckPrevAndCurrentValue />} */}
-        <hr />
+        {/* <hr /> */}
         {/* <TodoList />
         <hr />
         <ModeSelect />
