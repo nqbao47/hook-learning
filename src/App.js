@@ -1,11 +1,11 @@
 import * as React from "react";
-import ExampleUseReducer from "./components/useReducer";
+import Todo from "./components/practices/todo";
 
 function App() {
   return (
     <>
       <div style={{ padding: "50px" }}>
-        <ExampleUseReducer />
+        <Todo />
       </div>
     </>
   );
