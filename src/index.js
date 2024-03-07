@@ -4,6 +4,7 @@ import App from "./App";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "./theme";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
+import { StoreProvider } from "./components/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -24,9 +25,11 @@ emitComment(3);
 
 root.render(
   <React.StrictMode>
-    <CssVarsProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </CssVarsProvider>
+    <StoreProvider>
+      <CssVarsProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </CssVarsProvider>
+    </StoreProvider>
   </React.StrictMode>
 );

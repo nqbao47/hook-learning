@@ -1,15 +1,51 @@
-import * as React from "react";
-import Content from "./components/Context/Content.jsx";
-import { useContext } from "react";
-import { ThemeContext } from "./components/Context/ThemeContext.jsx";
 import "./App.css";
+import { useStore, actions } from "./components/store";
+import { useRef } from "react";
 
 function App() {
-  const context = useContext(ThemeContext);
+  const [state, dispatch] = useStore();
+  const { todos, inputTodo } = state;
+
+  const todoRef = useRef();
+
+  const handleAdd = () => {
+    dispatch(actions.addTodo(inputTodo));
+    dispatch(actions.setTodoInput(""));
+
+    todoRef.current.focus();
+  };
+
+  const handleDeleteTodo = (index) => {
+    dispatch(actions.deleteTodo(index));
+  };
+
+  const handleEditTodo = (index) => {
+    todoRef.current.focus();
+    state.editMode = true;
+    state.currentIndex = index;
+    dispatch(actions.setTodoInput(todos[index]));
+  };
+
   return (
     <div style={{ padding: "50px" }}>
-      <button onClick={context.handleToggle}>Toggle Theme</button>
-      <Content />
+      <input
+        ref={todoRef}
+        value={inputTodo}
+        placeholder="Enter todo..."
+        onChange={(e) => {
+          dispatch(actions.setTodoInput(e.target.value));
+        }}
+      />
+      <button onClick={handleAdd}>ADD</button>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>
+            {todo}
+            <button onClick={() => handleDeleteTodo(index)}>x</button>{" "}
+            <button onClick={() => handleEditTodo(index)}>Edit</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
