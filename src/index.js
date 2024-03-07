@@ -23,10 +23,10 @@ emitComment(2);
 emitComment(3);
 
 root.render(
-  // <React.StrictMode>
-  <CssVarsProvider theme={theme}>
-    <CssBaseline />
-    <App />
-  </CssVarsProvider>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <CssVarsProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </CssVarsProvider>
+  </React.StrictMode>
 );
